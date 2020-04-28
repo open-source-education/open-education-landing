@@ -24,5 +24,9 @@
     "first":{
       "paragraph":"Los estudiantes de todas las edades y niveles de educación están aprendiendo a través de cursos basados en Internet en lugar de cara a cara"
     }
+  },
+  "about":{
+    "title1":"Bienvenido ",
+    "title2":" Open Source Education "
   }
 }
