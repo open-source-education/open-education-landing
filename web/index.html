@@ -12,7 +12,7 @@
 
 
 <!-- Page Title -->
-<title>LearnPress | Education & Courses HTML Template</title>
+<title><%= title %></title>
 
 <!-- Favicon and Touch Icons -->
 <link href="images/favicon.png" rel="shortcut icon" type="image/png">
@@ -566,19 +566,19 @@
                 <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
+            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-0 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
               <img class="img-fullwidth" src="images/services/bg-2.jpg" alt="">
-              <div class="bg-silver-light border-1px p-20 pt-0 pb-30 mb-sm-180">
-                    <h4 class="letter-space-1 mt-10">Graduation<span class="text-theme-color-2"> Degree</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero omnis unde nesciunt?</p>
+              <div class="bg-silver-light border-1px p-20 pt-0 pb-30">
+                <h4 class=" letter-space-1 mt-10"><%= services['second']['title1'] %><span class="text-theme-color-2"> <%= services['second']['title2'] %></span></h4>
+                <p><%= services['second']['paragraph'] %></p>
                 <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-0 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
+            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
               <img class="img-fullwidth" src="images/services/bg-3.jpg" alt="">
-              <div class="bg-silver-light border-1px p-20 pt-0 pb-30">
-                  <h4 class=" letter-space-1 mt-10">Experience<span class="text-theme-color-2"> Yourself</span></h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero omnis unde nesciunt?</p>
+              <div class="bg-silver-light border-1px p-20 pt-0 pb-30 mb-sm-180">
+                    <h4 class="letter-space-1 mt-10"><%= services['third']['title1'] %><span class="text-theme-color-2"> <%= services['third']['title2'] %></span></h4>
+                <p><%= services['third']['paragraph'] %></p>
                 <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
               </div>
             </div>
@@ -594,9 +594,9 @@
           <div class="row mt-10">
             <div class="col-sm-12 col-md-6 mb-sm-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
               <h3 class="text-uppercase mt-0"><%= about['title1'] %><span class="text-theme-color-2"><%= about['title2'] %></span></h3>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Quos dolo rem consequ untur, natus laudantium commodi earum aliquid in ullam.Lorem ipsum.</p>
-              <p class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt ut dolorem laboriosam culpa excepturi sed distinctio eius! Ut magnam numquam libero quia vero blanditiis fugit corporis quisquam, debitis quidem laudantium deleniti.</p>
-              <p class="mb-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sunt ut dolorem laboriosam culpa excepturi sed distinctio eius! Ut magnam numquam libero quia vero blanditiis fugit corporis quisquam, debitis quidem laudantium deleniti.</p>
+              <p class="lead"><%= about['paragraph1'] %></p>
+              <p class="mb-15"><%= about['paragraph2'] %></p>
+              <p class="mb-10"><%= about['paragraph2'] %></p>
               <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-0" href="#">View Details</a>
             </div>
             <div class="col-sm-12 col-md-6 mt-0 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -617,7 +617,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-4">
             <div class="bg-white-transparent-9 pb-10 p-40">
-              <h2 class="mb-20 mt-30 line-height-1 text-center text-uppercase">Why <span class="text-theme-color-2"> Choose Us?</span></h2>
+              <h2 class="mb-20 mt-30 line-height-1 text-center text-uppercase"><%= chooseus['title1'] %> <span class="text-theme-color-2"> <%= chooseus['title2'] %></span></h2>
               <div class="row">
                   <div class="col-xs-12 col-sm-6 col-md-6">
                     <div class="icon-box p-15 mb-0 mb-sm-0 mt-sm-0">
@@ -625,8 +625,8 @@
                       <i class="fa fa-building text-theme-colored font-50"></i>
                       </a>
                       <div class="ml-70 ml-sm-0">
-                        <h4 class="icon-box-title mt-15 mb-5">Best Campus</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <h4 class="icon-box-title mt-15 mb-5"><%= chooseus['reason1']['title'] %></h4>
+                        <p><%= chooseus['reason1']['paragraph'] %></p>
                       </div>
                     </div>
                   </div>
@@ -636,8 +636,8 @@
                       <i class="fa fa-users text-theme-colored font-50"></i>
                       </a>
                       <div class="ml-70 ml-sm-0">
-                        <h4 class="icon-box-title mt-15 mb-5">Best Teachers</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <h4 class="icon-box-title mt-15 mb-5"><%= chooseus['reason2']['title'] %></h4>
+                        <p><%= chooseus['reason2']['paragraph'] %></p>
                       </div>
                     </div>
                   </div>
@@ -647,8 +647,8 @@
                       <i class="fa fa-book text-theme-colored font-50"></i>
                       </a>
                       <div class="ml-70 ml-sm-0">
-                        <h4 class="icon-box-title mt-15 mb-5">Best Library</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <h4 class="icon-box-title mt-15 mb-5"><%= chooseus['reason3']['title'] %></h4>
+                        <p><%= chooseus['reason3']['paragraph'] %></p>
                       </div>
                     </div>
                   </div>
@@ -658,8 +658,8 @@
                       <i class="fa fa-money text-theme-colored font-50"></i>
                       </a>
                       <div class="ml-70 ml-sm-0">
-                        <h4 class="icon-box-title mt-15 mb-5">Low Cost Services</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                        <h4 class="icon-box-title mt-15 mb-5"><%= chooseus['reason4']['title'] %></h4>
+                        <p><%= chooseus['reason4']['paragraph'] %></p>
                       </div>
                     </div>
                   </div>
