@@ -112,10 +112,8 @@
             <ul class="menuzord-menu onepage-nav">
               <li class="active"><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="#courses">Courses</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#teachers">Teachers</a></li>
-              <li><a href="#blog">Blog</a></li>
+              <li><a href="#whyus">Why us</a></li>
+              <li><a href="#search">Search</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -216,7 +214,7 @@
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              <div class="tp-caption tp-resizeme <%= slides['first']['detailsEnabled'] %> "
                 id="rs-1-layer-4"
 
                 data-x="['left']"
@@ -321,7 +319,7 @@
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              <div class="tp-caption tp-resizeme <%= slides['second']['detailsEnabled'] %>"
                 id="rs-2-layer-4"
 
                 data-x="['center']"
@@ -426,7 +424,7 @@
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              <div class="tp-caption tp-resizeme <%= slides['third']['detailsEnabled'] %>"
                 id="rs-3-layer-4"
 
                 data-x="['right']"
@@ -563,23 +561,23 @@
 
                     <h4 class=" letter-space-1 mt-10">Online<span class="text-theme-color-2"> Learning</span></h4>
                 <p><%= services['first']['paragraph'] %></p>
-                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+                <a href="#" class="btn btn-sm btn-theme-colored <%= services['first']['readMoreEnabled'] %> ">Read more</a>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-0 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
-              <img class="img-fullwidth" src="images/services/bg-2.jpg" alt="">
+              <img class="img-fullwidth" src="images/services/bg-3.jpg" alt="">
               <div class="bg-silver-light border-1px p-20 pt-0 pb-30">
                 <h4 class=" letter-space-1 mt-10"><%= services['second']['title1'] %><span class="text-theme-color-2"> <%= services['second']['title2'] %></span></h4>
-                <p><%= services['second']['paragraph'] %></p>
-                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+                <p><%= services['second']['paragraph'] %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                <a href="#" class="btn btn-sm btn-theme-colored  <%= services['second']['readMoreEnabled'] %>">Read more</a>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40 wow fadeInUp" data-margin-top="-160px" data-wow-duration="1s" data-wow-delay="0.1s">
-              <img class="img-fullwidth" src="images/services/bg-3.jpg" alt="">
+              <img class="img-fullwidth" src="images/services/bg-2.jpg" alt="">
               <div class="bg-silver-light border-1px p-20 pt-0 pb-30 mb-sm-180">
                     <h4 class="letter-space-1 mt-10"><%= services['third']['title1'] %><span class="text-theme-color-2"> <%= services['third']['title2'] %></span></h4>
                 <p><%= services['third']['paragraph'] %></p>
-                <a href="#" class="btn btn-sm btn-theme-colored">Read more</a>
+                <a href="#" class="btn btn-sm btn-theme-colored <%= services['third']['readMoreEnabled'] %> ">Read more</a>
               </div>
             </div>
           </div>
@@ -588,16 +586,16 @@
     </section>
 
     <!-- Section: About -->
-    <section id="about">
-      <div class="container mt-0 pb-70 pt-0">
+    <section id="about" class="bg-lighter " >
+      <div class="container pr-5 pl-5 mt-0 pt-70 pb-10 mb-0">
         <div class="section-content">
           <div class="row mt-10">
             <div class="col-sm-12 col-md-6 mb-sm-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
               <h3 class="text-uppercase mt-0"><%= about['title1'] %><span class="text-theme-color-2"><%= about['title2'] %></span></h3>
               <p class="lead"><%= about['paragraph1'] %></p>
               <p class="mb-15"><%= about['paragraph2'] %></p>
-              <p class="mb-10"><%= about['paragraph2'] %></p>
-              <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-0" href="#">View Details</a>
+              <p class="mb-10"><%= about['paragraph3'] %></p>
+              <a class="btn btn-colored btn-theme-colored btn-lg text-uppercase font-13 mt-0 <%= about['detailsEnabled'] %>" href="#">View Details</a>
             </div>
             <div class="col-sm-12 col-md-6 mt-0 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
               <div class="video-popup">
@@ -612,7 +610,7 @@
     </section>
 
    <!-- Divider: why choose us 1 -->
-    <section class="divider parallax" data-bg-img="images/bg/bg1.jpg" data-parallax-ratio="0.7">
+    <section id="whyus" class="divider parallax" data-bg-img="images/bg/bg1.jpg" data-parallax-ratio="0.7">
       <div class="container pt-0 pb-0">
         <div class="row">
           <div class="col-md-8 col-md-offset-4">
@@ -670,16 +668,17 @@
       </div>
     </section>
 
-    <!-- Section: courses  -->
-    <section id="courses">
+    <!-- Section: search  -->
+    <section id="search">
       <div class="container pr-5 pl-5 mt-0 pt-70 pb-10 mb-0">
         <div class="section-title text-center">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Our <span class="text-theme-color-2"> Courses</span></h2>
-              <p class="pb-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+              <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Search <span class="text-theme-color-2"> subjects</span></h2>
+              <br>
+              <p class="pb-20 hidden ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
               <!-- Works Filter -->
-              <div class="portfolio-filter text-center mb-40" data-link-with="grid-petcare-gallery">
+              <div class="portfolio-filter text-center mb-40 hidden" data-link-with="grid-petcare-gallery">
               <a href="#" class="active mb-sm-10" data-filter="*">All</a>
               <a href="#computer" class="" data-filter=".computer">Computer</a>
               <a href="#languages" class="" data-filter=".languages">Languages</a>
@@ -689,239 +688,106 @@
               </div>
               <!-- End Works Filter -->
 
+              <div class="input-group">
+                <input type="email" value="" name="EMAIL" placeholder="Your Email"  class="form-control" data-height="37px" id="mce-EMAIL">
+                <span class="input-group-btn">
+                    <button id="searchSubSubjects" type="submit" class="btn btn-colored btn-theme-colored m-0"><i class="fa fa-paper-plane-o text-white"></i></button>
+                </span>
+              </div>
+              <br>
               <!-- Portfolio Gallery Grid -->
               <div id="grid-petcare-gallery" class="gallery-isotope grid-4 gutter clearfix">
 
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item computer">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c1.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item computer">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c2.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item languages">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c3.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item languages">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c4.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item law">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c5.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item law">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c6.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item science">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c7.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item science">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c8.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item arts">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c9.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item arts">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c10.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item arts">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c11.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-                <!-- Portfolio Item Start -->
-                <div class="gallery-item arts">
-                  <div class="item">
-                    <div class="project mb-30 border-2px">
-                      <div class="thumb">
-                        <img class="img-fullwidth" alt="" src="images/project/c12.jpg">
-                        <div class="hover-link">
-                        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                        </div>
-                      </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Portfolio Item End -->
-
-
               </div>
+              <!-- Job Form Validation-->
+              <script type="text/javascript">
+
+              $( "#searchSubSubjects" ).click(function() {
+
+                var str = $( "#subSubjectTemplate" ).get(0).outerHTML;
+                str = str.replace("style=\"display:none\"","")
+                str = str.replace("id=\"subSubjectTemplate\"","")
+
+                // $( "#grid-petcare-gallery" ).append( $( str ) )
+                // $( "#grid-petcare-gallery" ).append( $( str ) )
+                // $( "#grid-petcare-gallery" ).append( $( str ) )
+
+
+
+                // console.log($portfolio_gallery);
+                // THEMEMASCOT.widget.TM_masonryIsotop();
+
+                //position: absolute; left: 720px; top: 789px;
+
+                $.getJSON( "http://localhost:5000/sub-subject/query", function( data ) {
+                  var items = [];
+
+                  var width = $( document ).width();
+                  console.log(width);
+
+
+                  var subjectNumber = data.content.length;
+                  var rows;
+                  var cols;
+                  var maxHeight;
+                  var paddingHeight = 250;
+
+                  if(width>800){
+                    subjectWidth = parseInt(width/4);
+                    rows = subjectNumber/4;
+                    cols = 4;
+                    maxHeight = 600;
+                    paddingHeight = 50
+                  }else{
+                    subjectWidth = parseInt(width/2);
+                    rows = subjectNumber/2;
+                    cols = 2;
+                    maxHeight = 300;
+                  }
+
+                  // var subjectWidth= subjectWidth;
+                  console.log(subjectNumber);
+                  console.log("subjectWidth:"+subjectWidth);
+                  console.log(rows);
+
+
+                  var count = 0;
+                  var currentRow = 0;
+                  $.each( data.content, function( key, val ) {
+
+                    console.log(val.subSubjectTitle);
+                    console.log(val.subSubjectThumbnail);
+                    console.log(val.subject);
+
+                    var newSubSubject = str;
+                    newSubSubject = newSubSubject.replace("@subSubjectTitle",val.subSubjectTitle);
+                    newSubSubject = newSubSubject.replace("@subSubjectThumbnail",val.subSubjectThumbnail);
+                    newSubSubject = newSubSubject.replace("@subject",val.subject);
+                    var html = $( newSubSubject );
+
+                    if(count > cols-1 ){
+                      currentRow++;
+                      count = 0;
+                    }
+
+                    console.log("-----------------");
+                    console.log("cols:"+cols);
+                    console.log("count:"+count);
+                    console.log("currentRow:"+currentRow);
+
+                    html.css("position", "absolute");
+                    html.css("left", count*subjectWidth+"px");
+                    html.css("top", currentRow*maxHeight+"px");
+                    $( "#grid-petcare-gallery" ).append( html )
+
+                    count++;
+                  });
+                  var newHeight = rows * maxHeight+paddingHeight;
+                  $( "#search" ).css("height",newHeight+"px");
+                });
+
+              });
+              </script>
               <!-- End Portfolio Gallery Grid -->
             </div>
           </div>
@@ -930,7 +796,7 @@
     </section>
 
     <!-- Diver: Video Background  -->
-    <section class="divider parallax layer-overlay overlay-theme-colored-9" data-bg-img="images/bg/bg1.jpg" data-parallax-ratio="0.7">
+    <section class="divider parallax layer-overlay overlay-theme-colored-9 <%= video['enable'] %> " data-bg-img="images/bg/bg1.jpg" data-parallax-ratio="0.7">
       <div class="container pt-60 pb-70">
         <!-- Section Content -->
         <div class="section-content">
@@ -947,7 +813,7 @@
     </section>
 
     <!-- Section: Gallery -->
-    <section id="gallery" class="bg-lighter">
+    <section id="gallery" class="bg-lighter <%= gallery['enable'] %> ">
       <div class="container pt-60">
         <div class="section-content">
           <div class="row">
@@ -1220,128 +1086,15 @@
       </div>
     </section>
 
-     <!-- Section: teachers -->
-    <section id="teachers">
-      <div class="container pt-70 pb-40">
-        <div class="section-title text-center">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <h2 class="mt-0 line-height-1 text-uppercase">Our <span class="text-theme-color-2">Teachers</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
-            </div>
-          </div>
-        </div>
-        <div class="row multi-row-clearfix">
-          <div class="col-md-12">
-            <div class="owl-carousel-4col" data-nav="true">
-              <div class="item">
-                <div class="hover-effect mb-30">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="images/team/1.jpg">
-                    <div class="hover-link">
-                      <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="details p-15 pt-10 pb-10">
-                    <h4 class="title mb-5">Proff.  DR.  Jhon Doe</h4>
-                    <h5 class="sub-title mt-0 mb-15">Teacher's Designation</h5>
-                    <a class="btn btn-theme-colored btn-sm" href="page-doctor-details.html">view details</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="hover-effect mb-30">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="images/team/2.jpg">
-                    <div class="hover-link">
-                      <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="details p-15 pt-10 pb-10">
-                    <h4 class="title mb-5">Proff.  DR.  Jhon Doe</h4>
-                    <h5 class="sub-title mt-0 mb-15">Teacher's Designation</h5>
-                    <a class="btn btn-theme-colored btn-sm" href="page-doctor-details.html">view details</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="hover-effect mb-30">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="images/team/3.jpg">
-                    <div class="hover-link">
-                      <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="details p-15 pt-10 pb-10">
-                    <h4 class="title mb-5">Proff.  DR.  Jhon Doe</h4>
-                    <h5 class="sub-title mt-0 mb-15">Teacher's Designation</h5>
-                    <a class="btn btn-theme-colored btn-sm" href="page-doctor-details.html">view details</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="hover-effect mb-30">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="images/team/4.jpg">
-                    <div class="hover-link">
-                      <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="details p-15 pt-10 pb-10">
-                    <h4 class="title mb-5">Proff.  DR.  Jhon Doe</h4>
-                    <h5 class="sub-title mt-0 mb-15">Teacher's Designation</h5>
-                    <a class="btn btn-theme-colored btn-sm" href="page-doctor-details.html">view details</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="hover-effect mb-30">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="images/team/3.jpg">
-                    <div class="hover-link">
-                      <ul class="styled-icons icon-dark icon-theme-colored icon-circled icon-sm">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="details p-15 pt-10 pb-10">
-                    <h4 class="title mb-5">Proff.  DR.  Jhon Doe</h4>
-                    <h5 class="sub-title mt-0 mb-15">Teacher's Designation</h5>
-                    <a class="btn btn-theme-colored btn-sm" href="page-doctor-details.html">view details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section: events -->
-    <section class="divider parallax layer-overlay overlay-dark-8" data-stellar-background-ratio="0.5" data-bg-img="images/bg/bg1.jpg">
-      <div class="container pt-40 pb-60">
+    <section id="contact" class="divider parallax layer-overlay" data-bg-img="images/bg/bg1.jpg" data-parallax-ratio="0.7">
+      <div class="container pt-60 pb-70">
+        <!-- Section Content -->
         <div class="section-content">
           <div class="row">
-            <div class="col-md-6 wow fadeInLeft mt-10 pr-30" data-wow-duration="1s" data-wow-delay="0.3s">
-              <h3 class="bg-theme-colored p-15 pl-30 mb-0 text-white">Get A Free Registration!</h3>
+            <div class="col-md-10 col-md-offset-1 text-center">
+              <h3 class="text-white text-uppercase font-30 font-weight-600 mt-0 mb-20"><%= contribute['title'] %></h3>
+              <p class="text-white lead"><%= contribute['paragraph'] %></p>
+              </a>
               <form id="volunteer_apply_form" class="bg-light p-30 pb-15" name="job_apply_form" action="#" method="post" enctype="multipart/form-data">
                 <div class="row">
                   <div class="col-sm-6">
@@ -1357,32 +1110,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="form-group mb-10">
-                      <div class="styled-select">
-                        <select id="booking_service" name="booking_service" class="form-control" required="">
-                            <option value="">- Select Your  Courses -</option>
-                        <option value="Accounting Technoloiges">Accounting Technoloiges</option>
-                        <option value="Chemical Engineering">Chemical Engineering</option>
-                        <option value="Computer Technologies">Computer Technologies</option>
-                        <option value="Development Studies">Development Studies</option>
-                        <option value="Electrical & Electronic">Electrical & Electronic</option>
-                        <option value="Modern Languages">Modern Languages</option>
-                        <option value="Modern Technologies">Modern Technologies</option>
-                        <option value="Software Engineering">Software Engineering</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
                 <div class="form-group">
                   <label for="form_message">Message <small>*</small></label>
-                  <textarea id="form_message" name="form_message" class="form-control required" rows="2" placeholder="Your cover letter/message sent to the employer"></textarea>
+                  <textarea id="form_message" name="form_message" class="form-control required" rows="2" placeholder="Soy un ... y me gustaría colaborar con ..."></textarea>
                 </div>
                 <div class="form-group">
                   <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="" />
-                  <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Apply Now</button>
+                  <button type="submit" class="btn btn-block btn-dark btn-theme-colored btn-sm mt-20 pt-10 pb-10" data-loading-text="Please wait...">Submit</button>
                 </div>
               </form>
               <!-- Job Form Validation-->
@@ -1404,96 +1138,14 @@
                         form_btn.prop('disabled', false).html(form_btn_old_msg);
                         $(form_result_div).html(data.message).fadeIn('slow');
                         setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+                      },
+                      error: function (request, status, error) {
+                          alert(request.responseText);
                       }
                     });
                   }
                 });
               </script>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-              <h3 class="text-uppercase ml-15 title line-bottom text-white">Next <span class="text-theme-color-2 font-weight-700">Events</span></h3>
-              <div class="bxslider bx-nav-top p-0 m-0">
-                <div class="col-xs-12 pr-0 col-sm-6 col-md-6 mb-20">
-                  <div class="pricing table-horizontal maxwidth400">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="thumb">
-                        <img class="img-fullwidth mb-sm-0" src="images/about/as1.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-6 p-10 pl-sm-50">
-                        <h4 class="mt-0 mb-5 mt-10"><a href="#" class="text-white">Upcoming Event Title</a></h4>
-                        <ul class="list-inline font-16 mb-5 text-white">
-                          <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                          <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                        </ul>
-                        <p class="mb-0 font-13 text-white mr-5 pr-10">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit. Quas eveniet.</p>
-                        <a class="font-16  text-white mt-20" href="#">Read More →</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 pr-0 col-sm-6 col-md-6 mb-30">
-                  <div class="pricing table-horizontal maxwidth400">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="thumb">
-                        <img class="img-fullwidth mb-sm-0" src="images/about/as2.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-6 p-10 pl-sm-50">
-                        <h4 class="mt-0 mb-5 mt-10"><a href="#" class="text-white">Upcoming Event Title</a></h4>
-                        <ul class="list-inline font-16 mb-5 text-white">
-                          <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                          <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                        </ul>
-                        <p class="mb-0 font-13 text-white mr-5 pr-10">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit. Quas eveniet.</p>
-                        <a class="font-16  text-white mt-20" href="#">Read More →</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 pr-0 col-sm-6 col-md-6 mb-30">
-                  <div class="pricing table-horizontal maxwidth400">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="thumb">
-                        <img class="img-fullwidth mb-sm-0" src="images/about/as3.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-6 p-10 pl-sm-50">
-                        <h4 class="mt-0 mb-5 mt-10"><a href="#" class="text-white">Upcoming Event Title</a></h4>
-                        <ul class="list-inline font-16 mb-5 text-white">
-                          <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                          <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                        </ul>
-                        <p class="mb-0 font-13 text-white mr-5 pr-10">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit. Quas eveniet.</p>
-                        <a class="font-16  text-white mt-20" href="#">Read More →</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-12 pr-0 col-sm-6 col-md-6 mb-30">
-                  <div class="pricing table-horizontal maxwidth400">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="thumb">
-                        <img class="img-fullwidth mb-sm-0" src="images/about/as4.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="col-md-6 p-10 pl-sm-50">
-                        <h4 class="mt-0 mb-5 mt-10"><a href="#" class="text-white">Upcoming Event Title</a></h4>
-                        <ul class="list-inline font-16 mb-5 text-white">
-                          <li class="pr-0"><i class="fa fa-calendar mr-5"></i> June 26, 2016 |</li>
-                          <li class="pl-5"><i class="fa fa-map-marker mr-5"></i>New York</li>
-                        </ul>
-                        <p class="mb-0 font-13 text-white mr-5 pr-10">Lorem ipsum dolor sit amet, conse ctetur adipisicing elit. Quas eveniet.</p>
-                        <a class="font-16  text-white mt-20" href="#">Read More →</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -1501,7 +1153,7 @@
     </section>
 
     <!-- Section: Blog -->
-    <section id="blog">
+    <section id="blog" class="<%= recentNews['enable'] %>" >
       <div class="container pb-70">
         <div class="section-title mb-20 text-center">
           <div class="row">
@@ -1584,222 +1236,54 @@
       </div>
     </section>
 
-    <!-- Section: Contact -->
-    <section id="contact" class="bg-lighter">
-      <div class="container pt-70 pb-40">
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-5">
-              <h3 class="line-bottom text-uppercase mt-0 mb-30 mt-sm-20">Find Our Location</h3>
-              <!-- Google Map HTML Codes -->
-              <div
-                data-address="121 King Street, Melbourne Victoria 3000 Australia"
-                data-popupstring-id="#popupstring1"
-                class="map-canvas autoload-map"
-                data-mapstyle="style8"
-                data-height="353"
-                data-latlng="-37.817314,144.955431"
-                data-title="sample title"
-                data-zoom="12"
-                data-marker="images/map-marker.png">
-              </div>
-              <div class="map-popupstring hidden" id="popupstring1">
-                <div class="text-center">
-                  <h3>Health Zone Office</h3>
-                  <p>121 King Street, Melbourne Victoria 3000 Australia</p>
-                </div>
-              </div>
-              <!-- Google Map Javascript Codes
-              <script src="http://maps.google.com/maps/api/js?key=AIzaSyCcjbzcYsqhMqEBs790Po9ZXmvZJjdE6MY"></script>
-              <script src="js/google-map-init.js"></script>-->
-            </div>
-            <div class="col-md-7">
-              <h3 class="line-bottom text-uppercase mt-0 mb-30 mt-sm-20">Send Us a Message</h3> <!-- Contact Form -->
-              <form id="contact_form" name="contact_form" class="" action="#" method="post">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group mb-30">
-                      <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group mb-30">
-                      <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group mb-30">
-                      <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="form-group mb-30">
-                      <input name="form_phone" class="form-control" type="text" placeholder="Enter Phone">
-                    </div>
-                  </div>
-                </div>
-                    <div class="form-group mb-15">
-                  <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
-                </div>
-                    <div class="form-group mb-30">
-                  <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                  <button type="submit" class="btn btn-flat btn-theme-colored text-uppercase mt-20 mb-sm-30 border-left-theme-color-2-4px" data-loading-text="Please wait...">Send your message</button>
-                  <button type="reset" class="btn btn-flat btn-theme-colored text-uppercase mt-20 mb-sm-30 border-left-theme-color-2-4px">Reset</button>
-                </div>
-              </form>
-              <!-- Contact Form Validation-->
-              <script type="text/javascript">
-                $("#contact_form").validate({
-                  submitHandler: function(form) {
-                    var form_btn = $(form).find('button[type="submit"]');
-                    var form_result_div = '#form-result';
-                    $(form_result_div).remove();
-                    form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                    var form_btn_old_msg = form_btn.html();
-                    form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                    $(form).ajaxSubmit({
-                      dataType:  'json',
-                      success: function(data) {
-                        if( data.status == 'true' ) {
-                          $(form).find('.form-control').val('');
-                        }
-                        form_btn.prop('disabled', false).html(form_btn_old_msg);
-                        $(form_result_div).html(data.message).fadeIn('slow');
-                        setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                      }
-                    });
-                  }
-                });
-              </script>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </div>
   <!-- end main-content -->
 
 
   <!-- Footer -->
-  <footer id="footer" class="footer bg-black-222" data-bg-img="images/footer-bg.png">
+  <footer id="footer" class="footer divider parallax layer-overlay overlay-dark-9" data-bg-img="images/bg/bg7.jpg" data-parallax-ratio="0.7">
     <div class="container pt-70 pb-40">
       <div class="row">
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <img class="mt-10 mb-15" alt="" src="images/logo-wide-white.png">
-            <p class="font-16 mb-10">GreenPeace is a library of Crowdfunding and Charity templates with predefined elements which helps you to build your own site. Lorem ipsum dolor sit amet consectetur.</p>
-            <a class="font-14" href="#"><i class="fa fa-angle-double-right text-theme-colored"></i> Read more</a>
-            <ul class="styled-icons icon-dark mt-20">
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".1s" data-wow-offset="10"><a href="#" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s" data-wow-offset="10"><a href="#" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".3s" data-wow-offset="10"><a href="#" data-bg-color="#05A7E3"><i class="fa fa-skype"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s" data-wow-offset="10"><a href="#" data-bg-color="#A11312"><i class="fa fa-google-plus"></i></a></li>
-              <li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".5s" data-wow-offset="10"><a href="#" data-bg-color="#C22E2A"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h5 class="widget-title line-bottom">Latest News</h5>
-            <div class="latest-posts">
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                <div class="post-right">
-                  <h5 class="post-title mt-0 mb-5"><a href="#">Sustainable Construction</a></h5>
-                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                </div>
-              </article>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                <div class="post-right">
-                  <h5 class="post-title mt-0 mb-5"><a href="#">Industrial Coatings</a></h5>
-                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                </div>
-              </article>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                <div class="post-right">
-                  <h5 class="post-title mt-0 mb-5"><a href="#">Storefront Installations</a></h5>
-                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                </div>
-              </article>
-              <article class="post media-post clearfix pb-0 mb-10">
-                <a href="#" class="post-thumb"><img alt="" src="http://placehold.it/80x55"></a>
-                <div class="post-right">
-                  <h5 class="post-title mt-0 mb-5"><a href="#">Industrial Coatings</a></h5>
-                  <p class="post-date mb-0 font-12">Mar 08, 2015</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h5 class="widget-title line-bottom">Useful Links</h5>
-            <ul class="list angle-double-right list-border">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Donor Privacy Policy</a></li>
-              <li><a href="#">Disclaimer</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Media Center</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="widget dark">
-            <h5 class="widget-title line-bottom">Quick Contact</h5>
-            <ul class="list-border">
-              <li><a href="#">+(012) 345 6789</a></li>
-              <li><a href="#">hello@yourdomain.com</a></li>
-              <li><a href="#" class="lineheight-20">121 King Street, Melbourne Victoria 3000, Australia</a></li>
-            </ul>
-            <p class="font-16 text-white mb-5 mt-15">Subscribe to our newsletter</p>
-            <form id="footer-mailchimp-subscription-form" class="newsletter-form mt-10">
-              <label class="display-block" for="mce-EMAIL"></label>
-              <div class="input-group">
-                <input type="email" value="" name="EMAIL" placeholder="Your Email"  class="form-control" data-height="37px" id="mce-EMAIL">
-                <span class="input-group-btn">
-                    <button type="submit" class="btn btn-colored btn-theme-colored m-0"><i class="fa fa-paper-plane-o text-white"></i></button>
-                </span>
-              </div>
-            </form>
-
-
-          </div>
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <img src="images/logo-wide.png" alt="">
+          <p class="mt-20 mb-20">Made with </p>
+          <p class="mt-20 mb-20"><a target="_blank" href="https://www.templateshub.net/template/LearnPress-Education-Courses">LearnPress-Education-Courses</a></p>
+          <ul class="styled-icons icon-dark icon-circled icon-sm mb-40 hidden">
+            <li><a href="#"><i class="fa fa-facebook"></i></a> </li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+            <li><a href="#"><i class="fa fa-pinterest"></i></a> </li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a> </li>
+            <li><a href="#"><i class="fa fa-youtube"></i></a> </li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="footer-bottom bg-black-333">
-      <div class="container pt-20 pb-20">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="font-11 text-black-777 m-0"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-          </div>
-          <div class="col-md-6 text-right">
-            <div class="widget no-border m-0">
-              <ul class="list-inline sm-text-center mt-5 font-12">
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#">Help Desk</a>
-                </li>
-                <li>|</li>
-                <li>
-                  <a href="#">Support</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <div class="container-fluid copy-right p-20 bg-black-333">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p class="font-11 text-black-777 m-0"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
         </div>
       </div>
     </div>
   </footer>
   <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+</div>
+
+<div id="subSubjectTemplate" style="display:none" class="gallery-item computer">
+  <div class="item">
+    <div class="project mb-30 border-2px">
+      <div class="thumb">
+        <img class="img-fullwidth" alt="" src="@subSubjectThumbnail" style="height: 200px;" >
+        <div class="hover-link">
+        <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>Open</span> </a>
+        </div>
+      </div>
+  <div class="project-details p-15 pt-10 pb-10">
+    <h5 class="font-14 font-weight-500 mb-5">@subject</h5>
+    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">@subSubjectTitle</a></h4>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- end wrapper -->
 

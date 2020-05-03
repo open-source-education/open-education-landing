@@ -4,36 +4,42 @@
   "slides":{
     "first" : {
       "title":"Educacion",
-      "subtitle":"Educación para todos",
+      "subtitle":"Online",
       "paragraph1":"Sólo las personas que han recibido educación son libres.",
-      "paragraph2":"Epicteto"
+      "paragraph2":"Epicteto",
+      "detailsEnabled":"hidden"
     },
     "second" : {
-      "title":"Alimenta tu conocimiento",
-      "subtitle":"Educación para todos",
+      "title":"Auto",
+      "subtitle":"Aprendizaje",
       "paragraph1":"Creo firmemente que la autoeducación es el único tipo de educación que existe.",
-      "paragraph2":"Isaac Asimov"
+      "paragraph2":"Isaac Asimov",
+      "detailsEnabled":"hidden"
     },
     "third" : {
-      "title":"Muestra tu conocimiento",
-      "subtitle":"Por el futuro",
+      "title":"Comparte",
+      "subtitle":"Tu conociemiento",
       "paragraph1":"La mente una vez iluminada no puede volverse de nuevo oscura.",
-      "paragraph2":"Thomas Paine"
+      "paragraph2":"Thomas Paine",
+      "detailsEnabled":"hidden"
     }
   },
   "services":{
     "first":{
-      "paragraph":"Los estudiantes de todas las edades y niveles de educación están aprendiendo a través de cursos basados en Internet en lugar de cara a cara"
+      "paragraph":"Los estudiantes aprenderan a través de cursos basados en internet en lugar de cara a cara",
+      "readMoreEnabled":"hidden"
     },
     "second":{
-      "title1":"Agile",
-      "title2":"Learning",
-      "paragraph":"Aprende a tu propio ritmo"
-    },
-    "third":{
       "title1":"Self",
       "title2":"Learning",
-      "paragraph":"Adquiere nuevos conocimientos por cuenta propia"
+      "paragraph":"Adquiere nuevos conocimientos por cuenta propia a tu propio ritmo. Todo depende de ti!!",
+      "readMoreEnabled":"hidden"
+    },
+    "third":{
+      "title1":"Collaborative",
+      "title2":"Knowledge",
+      "paragraph":"Explora, crea y comparte información para personas que buscan incrementar su conocimiento.",
+      "readMoreEnabled":"hidden"
     }
   },
   "about":{
@@ -41,7 +47,8 @@
     "title2":" Education ",
     "paragraph1":"Somos una biblioteca digital pública de recursos educativos abiertos.",
     "paragraph2":"Explore, cree y colabore con educadores y alumnos de todo el mundo",
-    "paragraph3":"Tu conocimiento, nuestro conocimiento será su conocimiento"
+    "paragraph3":"Tu conocimiento, nuestro conocimiento será su conocimiento",
+    "detailsEnabled":"hidden"
   },
   "chooseus":{
     "title1":"Por que",
@@ -62,5 +69,24 @@
       "title":"Sin costo",
       "paragraph":"El conocimiento debe ser libre y gratuito para todos"
     }
+  },
+  "video":{
+    "enable":"hidden"
+  },
+  "gallery":{
+    "enable":"hidden"
+  },
+  "teachers":{
+    "enable":"hidden"
+  },
+  "recentNews":{
+    "enable":"hidden"
+  },
+  "contribute":{
+    "title":"Contacto",
+    "paragraph":"Lo mas importante es subir material educativo válido y público. Tambien en se puede apoyar en el desarrollo de esta web. Envianos tus datos y te contactaremos"
+  },
+  "footer":{
+    "paragraph":"hidden"
   }
 }
