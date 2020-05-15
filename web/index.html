@@ -674,7 +674,7 @@
         <div class="section-title text-center">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Search <span class="text-theme-color-2"> subjects</span></h2>
+              <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Search <span class="text-theme-color-2"> Chapters</span></h2>
               <br>
               <p class="pb-20 hidden ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
               <!-- Works Filter -->
@@ -689,7 +689,7 @@
               <!-- End Works Filter -->
 
               <div class="input-group">
-                <input type="email" value="" name="EMAIL" placeholder="Your Email"  class="form-control" data-height="37px" id="mce-EMAIL">
+                <input type="email" value="" name="EMAIL" placeholder="Chapter title"  class="form-control" data-height="37px" id="mce-EMAIL">
                 <span class="input-group-btn">
                     <button id="searchSubSubjects" type="submit" class="btn btn-colored btn-theme-colored m-0"><i class="fa fa-paper-plane-o text-white"></i></button>
                 </span>
@@ -723,7 +723,7 @@
                   var items = [];
 
                   var width = $( document ).width();
-                  console.log(width);
+                  console.log("width:"+width);
 
 
                   var subjectNumber = data.content.length;
@@ -731,24 +731,25 @@
                   var cols;
                   var maxHeight;
                   var paddingHeight = 250;
+                  var paddingSpaceItem = 10;
 
-                  if(width>800){
-                    subjectWidth = parseInt(width/4);
-                    rows = subjectNumber/4;
+                  if(width>500){
+                    subjectWidth = parseInt((width-200)/4);
                     cols = 4;
+                    rows = subjectNumber/cols;
                     maxHeight = 600;
                     paddingHeight = 50
                   }else{
-                    subjectWidth = parseInt(width/2);
-                    rows = subjectNumber/2;
-                    cols = 2;
+                    subjectWidth = width-100;
+                    cols = 1;
+                    rows = subjectNumber/cols;
                     maxHeight = 300;
                   }
 
                   // var subjectWidth= subjectWidth;
-                  console.log(subjectNumber);
+                  console.log("subjectNumber:"+subjectNumber);
                   console.log("subjectWidth:"+subjectWidth);
-                  console.log(rows);
+                  console.log("rows:"+rows);
 
 
                   var count = 0;
@@ -1270,7 +1271,7 @@
 </div>
 
 <div id="subSubjectTemplate" style="display:none" class="gallery-item computer">
-  <div class="item">
+  <div class="item" style="padding: 15px;" >
     <div class="project mb-30 border-2px">
       <div class="thumb">
         <img class="img-fullwidth" alt="" src="@subSubjectThumbnail" style="height: 200px;" >
