@@ -2,12 +2,14 @@ var express = require('express');
 var app = express();
 var serveStatic = require('serve-static')
 var staticAssets = new serveStatic(__dirname+"/web", { 'index': ['default.html', 'default.htm'] })
+var expressLayouts = require('express-ejs-layouts');
 
 var variablesFolder = __dirname+"/variables";
 
 // set the port of our application
 var port = process.env.PORT || 2708;
 
+app.use(expressLayouts);
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views',__dirname+"/web");
