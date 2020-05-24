@@ -1,3 +1,4 @@
+const fs = require('fs')
 var express = require('express');
 var app = express();
 var serveStatic = require('serve-static')
@@ -9,13 +10,14 @@ var variablesFolder = __dirname+"/variables";
 // set the port of our application
 var port = process.env.PORT || 2708;
 
-app.use(expressLayouts);
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views',__dirname+"/web");
 // use .html instead .ejs
 app.engine('html', require('ejs').renderFile);
 
+app.set('layout',"layout.html")
+app.use(expressLayouts);
 
 /**
  * If your html is About.html, just create a file About.json in
@@ -37,7 +39,18 @@ app.get('*', function(req, res, next) {
       var relativeResourcePath = req.url.substring(1,req.url.length);
       console.log("requested resource relative path: "+relativeResourcePath);
       var resourceVariablesPath = variablesFolder + "/"+ relativeResourcePath.replace(".html",".json")
-      res.render(relativeResourcePath, require(resourceVariablesPath));
+
+      try {
+        if (fs.existsSync(resourceVariablesPath)) {
+          res.render(relativeResourcePath, require(resourceVariablesPath));
+        }else{
+          res.render(relativeResourcePath);
+        }
+      } catch(err) {
+        console.error(err)
+      }
+
+
     }else{
       return staticAssets(req, res, next);
     }
